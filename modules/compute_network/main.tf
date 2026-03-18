@@ -30,6 +30,12 @@ resource "google_compute_network_peering" "compute_network_peering" {
     ignore_changes        = []
     create_before_destroy = true
   }
+
+  export_custom_routes = var.export_custom_routes
+  import_custom_routes = var.import_custom_routes
+
+  export_subnet_routes_with_public_ip = var.export_subnet_routes_with_public_ip
+  import_subnet_routes_with_public_ip = var.import_subnet_routes_with_public_ip
 }
 #---------------------------------------------------
 # Create compute subnetwork

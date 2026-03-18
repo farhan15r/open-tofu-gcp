@@ -45,9 +45,28 @@ variable "peer_network" {
   default     = ""
 }
 
-variable "auto_create_routes" {
+variable "export_custom_routes" {
   description = "(Optional) If set to true, the routes between the two networks will be created and managed automatically. Defaults to true."
-  default     = "true"
+  type        = bool
+  default     = false
+}
+
+variable "import_custom_routes" {
+  description = "(Optional) If set to true, the routes between the two networks will be created and managed automatically. Defaults to true."
+  type        = bool
+  default     = false
+}
+
+variable "export_subnet_routes_with_public_ip" {
+  description = "(Optional) If set to true, the routes between the two networks will be created and managed automatically. Defaults to true."
+  type        = bool
+  default     = false
+}
+
+variable "import_subnet_routes_with_public_ip" {
+  description = "(Optional) If set to true, the routes between the two networks will be created and managed automatically. Defaults to true."
+  type        = bool
+  default     = false
 }
 
 variable "enable_compute_subnetwork" {
